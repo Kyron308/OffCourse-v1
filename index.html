@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#11150f" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Offcourse" />
+  <meta name="description" content="Offcourse turns free time into mystery adventures and remembers the places you still want to explore." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Offcourse</title>
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <button class="brand" data-route="home" aria-label="Go home">
+        <span class="brand-mark">↗</span>
+        <span>OFFCOURSE</span>
+      </button>
+      <button class="icon-btn" id="installBtn" hidden aria-label="Install app">＋</button>
+    </header>
+
+    <main id="view" class="view" aria-live="polite"></main>
+
+    <nav class="tabbar" aria-label="Primary">
+      <button data-route="home" class="tab active"><span>⌂</span><small>Home</small></button>
+      <button data-route="seeds" class="tab"><span>✦</span><small>Seeds</small></button>
+      <button data-route="world" class="tab"><span>⌖</span><small>World</small></button>
+      <button data-route="history" class="tab"><span>◷</span><small>History</small></button>
+      <button data-route="settings" class="tab"><span>⚙</span><small>More</small></button>
+    </nav>
+  </div>
+
+  <dialog id="sheet" class="sheet"><div id="sheetContent"></div></dialog>
+  <input id="photoPicker" type="file" accept="image/*" capture="environment" hidden />
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="db.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
